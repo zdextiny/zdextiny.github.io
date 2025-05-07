@@ -1,50 +1,91 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background: #f2f2f2;
   color: #333;
-  line-height: 1.6;
 }
 
 header {
-  background-color: #4f46e5;
-  color: white;
-  padding: 2rem;
+  background-color: #222;
+  color: #fff;
   text-align: center;
+  padding: 40px 20px;
 }
 
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 section {
-  background: white;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 40px 20px;
 }
 
-h1, h2 {
-  margin-top: 0;
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-a {
-  color: #4f46e5;
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.redes {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.redes li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.redes a {
   text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
 }
 
-a:hover {
-  text-decoration: underline;
+.proyecto {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.galeria img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
 }
 
 footer {
+  background-color: #222;
+  color: #fff;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background-color: #eee;
-  margin-top: 2rem;
+  padding: 20px;
 }
