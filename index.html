@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -34,14 +33,10 @@
         Un juego con vista isométrica 3D estilo Diablo/Hades en el cual se pelean contra distintos jefes y se consiguen habilidades nuevas. Uno de los proyectos más completos en 3D.
       </p>
 
-      <div class="galeria">
-        <img src="image/lagrima-the-eternal-sword/portada.jpg" alt="Portada del juego">
-        <img src="image/lagrima-the-eternal-sword/screenshot1.jpg" alt="Captura 1 del juego">
-        <img src="image/lagrima-the-eternal-sword/screenshot2.jpg" alt="Captura 2 del juego">
-        <img src="image/lagrima-the-eternal-sword/screenshot3.jpg" alt="Captura 3 del juego">
-        <img src="image/lagrima-the-eternal-sword/screenshot4.jpg" alt="Captura 4 del juego">
-        <img src="image/lagrima-the-eternal-sword/screenshot5.jpg" alt="Captura 5 del juego">
-        <img src="image/lagrima-the-eternal-sword/screenshot6.jpg" alt="Captura 6 del juego">
+      <div class="galeria-interactiva">
+        <button onclick="cambiarImagen(-1)">&#10094;</button>
+        <img id="imagenPrincipal" src="image/lagrima-the-eternal-sword/portada.jpg" alt="Portada del juego">
+        <button onclick="cambiarImagen(1)">&#10095;</button>
       </div>
     </section>
 
@@ -50,5 +45,26 @@
   <footer>
     <p>&copy; 2025 Agustín Cavalie</p>
   </footer>
+
+  <script>
+    const imagenes = [
+      "image/lagrima-the-eternal-sword/portada.jpg",
+      "image/lagrima-the-eternal-sword/screenshot1.jpg",
+      "image/lagrima-the-eternal-sword/screenshot2.jpg",
+      "image/lagrima-the-eternal-sword/screenshot3.jpg",
+      "image/lagrima-the-eternal-sword/screenshot4.jpg",
+      "image/lagrima-the-eternal-sword/screenshot5.jpg",
+      "image/lagrima-the-eternal-sword/screenshot6.jpg"
+    ];
+
+    let indiceActual = 0;
+
+    function cambiarImagen(direccion) {
+      indiceActual += direccion;
+      if (indiceActual < 0) indiceActual = imagenes.length - 1;
+      if (indiceActual >= imagenes.length) indiceActual = 0;
+      document.getElementById("imagenPrincipal").src = imagenes[indiceActual];
+    }
+  </script>
 </body>
 </html>

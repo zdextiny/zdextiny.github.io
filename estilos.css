@@ -2,90 +2,76 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f2f2f2;
-  color: #333;
+  background-color: #f4f4f4;
 }
 
 header {
-  background-color: #222;
-  color: #fff;
+  background-color: #333;
+  color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 2rem;
 }
 
 header h1 {
-  font-size: 36px;
-  margin: 0;
+  font-size: 2.5rem;
 }
 
 header p {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-section {
-  padding: 40px 20px;
+#about, #proyectos {
+  padding: 2rem;
+  background-color: #fff;
+  margin: 1rem auto;
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  text-align: center;
+#about h2, #proyectos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  text-align: center;
+#about p {
+  font-size: 1.2rem;
 }
 
-p {
-  max-width: 800px;
-  margin: 0 auto 20px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.redes {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-.redes li {
+#about .redes li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0.5rem;
 }
 
-.redes a {
+#about .redes a {
   text-decoration: none;
-  color: #007acc;
-  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
 }
 
-.proyecto {
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.galeria {
+.galeria-interactiva {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-top: 1rem;
 }
 
-.galeria img {
-  max-width: 300px;
-  width: 100%;
+.galeria-interactiva img {
+  max-width: 80%;
   height: auto;
-  border: 2px solid #333;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+.galeria-interactiva button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
 }
+
+.galeria-interactiva button
