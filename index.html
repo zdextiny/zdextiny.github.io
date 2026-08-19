@@ -1,684 +1,322 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Agustin Cavalie &mdash; Game Developer</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Agustin Cavalie Portfolio" />
-	<meta name="keywords" content="Agustin Cavalie Portfolio" />
-	<meta name="author" content="Agustin Cavalie" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Agustin Cavalie — Game Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agustin Cavalie (Z-Dextiny) — game developer portfolio. Unity, gameplay programming, game feel.">
+  <meta name="author" content="Agustin Cavalie">
 
-	<!-- 
-	//////////////////////////////////////////////////////
+  <meta property="og:title" content="Agustin Cavalie — Game Developer">
+  <meta property="og:description" content="Portfolio de juegos y prototipos: Unity, Unreal, C#, homebrew de Nintendo DS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zdextiny.github.io/images/Baza1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agustin Cavalie — Game Developer">
+  <meta name="twitter:description" content="Portfolio de juegos y prototipos: Unity, Unreal, C#, homebrew de Nintendo DS.">
+  <meta name="twitter:image" content="https://zdextiny.github.io/images/Baza1.png">
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/game-player.css">
+</head>
+<body>
 
-	//////////////////////////////////////////////////////
-	 -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+  <header class="site-nav" id="top">
+    <div class="wrap site-nav__inner">
+      <a class="site-nav__brand" href="#top"><span class="prompt">&gt;</span> z_dextiny</a>
+      <nav class="site-nav__links" id="nav-links">
+        <a href="#about">about</a>
+        <a href="#work">work</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#resume">resume</a>
+        <a href="#contact" class="btn btn--small btn--accent">contact</a>
+      </nav>
+      <button class="site-nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+  <main>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__gallery" aria-hidden="true">
+        <img class="hero__gallery-item" src="images/hero-bender.gif" alt="" loading="lazy">
+        <img class="hero__gallery-item" src="images/hero-cuarto.png" alt="" loading="lazy">
+        <div class="hero__gallery-slot"></div>
+        <img class="hero__gallery-item" src="images/hero-picocad.gif" alt="" loading="lazy">
+        <img class="hero__gallery-item" src="images/hero-carta.png" alt="" loading="lazy">
+        <img class="hero__gallery-item" src="images/hero-h2o1.png" alt="" loading="lazy">
+      </div>
+      <div class="wrap hero__inner">
+        <p class="eyebrow reveal">// game_developer.exe<span class="blink">_</span></p>
+        <h1 class="hero__title reveal">
+          Agustín<br>
+          <span class="text-accent">Cavalié</span>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Diseño y programo mecánicas de juego que se sienten bien de controlar
+          — desde arcades 2D pixel art hasta juegos grandes de acción 3D.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--accent">Ver proyectos</a>
+          <a href="#contact" class="btn btn--ghost">Contactar</a>
+        </div>
+        <ul class="social-row reveal" aria-label="Redes">
+          <li><a href="https://x.com/Slender_man2203" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://zdextiny.itch.io" target="_blank" rel="noopener">itch.io</a></li>
+          <li><a href="https://github.com/zdextiny" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/agustín-cavalie-a88922149/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll down"><span></span></a>
+    </section>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <p class="section-kicker reveal">01 — about</p>
+        <div class="about-grid">
+          <div class="about-portrait reveal">
+            <img src="images/user-3.jpg" alt="Agustin Cavalie" loading="lazy">
+          </div>
+          <div class="about-body reveal">
+            <h2 class="h2">Hola, soy Agustín.</h2>
+            <p>Game designer enfocado en el pulido, el <em>game feel</em>, y en que la
+              jugabilidad no sea solo funcional sino satisfactoria de verdad.</p>
+            <p>Desarrollé tanto juegos 2D de estilo arcade como proyectos 3D completos,
+              casi siempre en solitario, cubriendo diseño, programación y arte. Fuera de los juegos hice paginas web o proyectos educativos</p>
+            <p>Me inspiro en la exploración y narrativa de <strong>Tunic</strong>,
+              <strong>Hollow Knight</strong> y <strong>Dark Souls</strong>, combinadas con
+              el ritmo fluido de <strong>Devil May Cry</strong>, <strong>Downwell</strong>
+              o <strong>Smash Bros</strong>.</p>
+            <dl class="about-facts">
+              <div><dt>Ubicación</dt><dd>Buenos Aires, Argentina</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:agustincavalie14@gmail.com">agustincavalie14@gmail.com</a></dd></div>
+              <div><dt>Motores</dt><dd>Unity · Unreal</dd></div>
+              <div><dt>Herramientas</dt><dd>Aseprite · Illustrator · Crocotile 3D · PicoCad</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/honey.png);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/user-3.jpg);"></div>
-							<h1><span>Agustin Cavalie</span></h1>
-							<h3><span>Game designer/Developer </span></h3>
-							<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="https://x.com/Slender_man2203" target="_blank"><i class="icon-twitter2"></i></a></li>
-									<li><a href="https://zdextiny.itch.io" target="_blank"><i class="icon-pacman"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/agustín-cavalie-a88922149/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=agustincavalie14@gmail.com" target="_blank">
-										    <i class="icon-mail2"></i>
-  										</a>
-									</li>
-								</ul>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+    <!-- FEATURED WORK -->
+    <section class="section section--alt" id="work">
+      <div class="wrap">
+        <p class="section-kicker reveal">02 — professional work</p>
+        <h2 class="h2 reveal">De Wikimedia al Museo</h2>
+        <div class="feature" id="feature-wikimedia">
+          <div class="feature__gallery reveal" id="feature-wikimedia-gallery">
+            <img src="images/screen_1.png" alt="Minijuego del museo, captura 1" loading="lazy">
+            <img src="images/screen_3.png" alt="Minijuego del museo, captura 2" loading="lazy">
+            <img src="images/screen_4.png" alt="Minijuego del museo, captura 3" loading="lazy">
+          </div>
+          <div class="feature__body reveal" id="feature-wikimedia-info">
+            <p class="meta-row">
+              <span>Jul 2024 – Ene 2025</span>
+              <span>Wikimedia Argentina</span>
+              <span>Unity · WebGL</span>
+            </p>
+            <p>Colección de minijuegos WebGL que se resuelven recorriendo el tour del
+              Museo Gregorio Álvarez, en Neuquén — pensada para funcionar igual de bien
+              en celular que en PC.</p>
+            <ul class="check-list">
+              <li>Diseño de los minijuegos a partir del contenido curatorial del museo.</li>
+              <li>Mecánicas de jugador: arrastrar, seleccionar, mover cámaras y botones táctiles.</li>
+              <li>Detección y resolución de bugs, mejoras de performance y estabilidad.</li>
+              <li>Configuración WebGL apuntada tanto a celulares como a PC.</li>
+            </ul>
+            <div class="feature__actions">
+              <button type="button" class="btn btn--accent btn--small" id="feature-wikimedia-play">Jugar</button>
+              <a href="https://zdextiny.itch.io/wikimedia-al-museo" target="_blank" rel="noopener" class="btn btn--ghost btn--small">Ir al sitio oficial ↗</a>
+            </div>
+          </div>
+          <div class="feature__player" id="feature-wikimedia-player" hidden>
+            <div class="feature__player-bar">
+              <button type="button" class="btn btn--ghost btn--small" id="feature-wikimedia-close">✕ Cerrar</button>
+              <div class="feature__player-bar-right">
+                <button type="button" class="btn btn--ghost btn--small" id="feature-wikimedia-fullscreen">⛶ Pantalla completa</button>
+                <a href="https://zdextiny.itch.io/wikimedia-al-museo" target="_blank" rel="noopener" class="btn btn--ghost btn--small">Ir al sitio oficial ↗</a>
+              </div>
+            </div>
+            <div class="feature__player-frame-wrap">
+              <div class="game-player__loading" id="feature-wikimedia-loading">
+                <div class="game-player__spinner"></div>
+                <span>Cargando…</span>
+              </div>
+              <iframe id="feature-wikimedia-frame" class="feature__player-frame" src="about:blank" title="Museo Gregorio Álvarez — jugable" allow="gamepad; fullscreen; autoplay" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<div id="fh5co-about" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Me</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="info">
-						<li><span class="first-block">Full Name:</span><span class="second-block">Agustin Nicolas Cavalie</span></li>
-						<li><span class="first-block">Phone:</span><span class="second-block">+ 54 2355489080</span></li>
-						<li><span class="first-block">Email:</span><span class="second-block">agustincavalie14@gmail.com</span></li>
-						<li><span class="first-block">Address:</span><span class="second-block">Capital Federal, Buenos Aires Argentina</span></li>
-					</ul>
-				</div>
-				<div class="col-md-8">
-					<h2>Hello There!</h2>
-					<p>Hey! I’m a game designer focused on polish, game feel, and making gameplay that’s not just functional, but fun and satisfying.</p>
-					<p>I’ve developed both 2D arcade-style indie games and full 3D projects, often working solo across design, programming, and visual assets. Beyond games, I’ve also created interactive educational experiences for museums and institutions.</p>
-					<p>I enjoy prototyping and fine-tuning gameplay until every movement, hit, and transition feels right. I work with tools like Unity, Photoshop, Aseprite, Illustrator, and Crocotile 3D to bring my ideas to life from concept to final polish.</p>
-					<p>My design style is inspired by the exploration and storytelling of Tunic, Hollow Knight, and Dark Souls, combined with the fast-paced, fluid gameplay of Devil May Cry, Downwell, or Smash Bros. I aim to create experiences that feel good to control and even better to master.</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://x.com/Slender_man2203" target="_blank"><i class="icon-twitter2"></i></a></li>
-							<li><a href="https://zdextiny.itch.io" target="_blank"><i class="icon-pacman"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/agustín-cavalie-a88922149/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=agustincavalie14@gmail.com" target="_blank">
-										    <i class="icon-mail2"></i>
-  										</a>
-									</li>
-						</ul>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- PROJECTS (rendered from js/projects.js) -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <p class="section-kicker reveal">03 — personal projects</p>
+        <h2 class="h2 reveal">Proyectos personales</h2>
+        <p class="section-lead reveal">Un poco de todo lo que estuve trabajando por mi cuenta.</p>
+        <div class="project-grid" id="project-grid"><!-- JS injects cards here --></div>
+      </div>
+    </section>
 
-	<hr style="border: 2px solid rgb(83, 83, 83); width: 50%; border-radius: 3px;">
-	
-	<div id="fh5co-about" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Professional Experience</h2>
-				</div>
-			</div>
+    <!-- SKILLS -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <p class="section-kicker reveal">04 — skills</p>
+        <h2 class="h2 reveal">Herramientas y conceptos</h2>
+        <div class="skills-grid">
+          <div class="skills-card reveal">
+            <h3>Motores &amp; arte</h3>
+            <div class="chips">
+              <span class="chip">Unity</span><span class="chip">Unreal</span>
+              <span class="chip">Aseprite</span><span class="chip">Illustrator</span>
+              <span class="chip">Photoshop</span><span class="chip">Premiere</span>
+              <span class="chip">ShotCut</span><span class="chip">PicoCad</span>
+              <span class="chip">Crocotile 3D</span>
+            </div>
+          </div>
+          <div class="skills-card reveal">
+            <h3>Código</h3>
+            <div class="chips">
+              <span class="chip">C#</span><span class="chip">C++</span><span class="chip">C</span>
+              <span class="chip">HTML5</span><span class="chip">JavaScript</span>
+            </div>
+          </div>
+          <div class="skills-card skills-card--wide reveal">
+            <h3>Programación de juegos</h3>
+            <div class="chips">
+              <span class="chip">Factory</span><span class="chip">Builder</span>
+              <span class="chip">Command</span><span class="chip">Mediator</span>
+              <span class="chip">Strategy</span><span class="chip">Observer</span>
+              <span class="chip">Object Pooling</span><span class="chip">A* Pathfinding</span>
+              <span class="chip">Dijkstra</span><span class="chip">FSM</span>
+              <span class="chip">Steering</span><span class="chip">Behaviour Trees</span>
+              <span class="chip">MVC</span><span class="chip">Netcode Authoritative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><b><h3>De Wikimedia al Museo</h3></b></div>
-							<span class="company">july 2024 - january 2025</span>
-						</li>
-						
-						<div class="row">
-							<div class="col-md-4">
-								<div style="padding-bottom: 20px;">
-									<img class="animate-box" src="images/screen_1.png" style="width:100%; border-radius: 8px;">
-								</div>
-								<div style="padding-bottom: 20px;">
-									<img class="animate-box" src="images/screen_3.png" style="width:100%; border-radius: 8px;">
-								</div>
-								<div style="padding-bottom: 20px;">
-									<img class="animate-box" src="images/screen_4.png" style="width:100%; border-radius: 8px;">
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="timeline-heading animate-box">
-									<h3 class="timeline-title">De Wikimedia Al Museo - WebGL - CellPhone/PC/h3>
-									
-									<ul class="info">
-										<li>
-											<span><b>Role</b></span><br>
-											<span>Gameplay Programmer</span>
-										</li>
-										<li>
-											<span><b>Engine</b></span><br>
-											<span>Unity</span>
-										</li>
-										<li>
-											<span><b>Summary</b></span><br>
-											<span> Collection of WebGl mini-games which are solved by going through the museum tour.</span>
-										</li>
-										<li>
-											<span><b>Contributions</b></span><br>
-											<span>
-												<ul>
-													<li style="list-style-type: square"><spam><b>Minigame Design:</b></spam><samp> Creation of the game design based on information from the museum</samp></li>
-													<li style="list-style-type: square"><spam><b>Player Mechanics:</b></spam><samp> Drag, select, move cameras and buttons.</samp></li>
-													<li style="list-style-type: square"><spam><b>Bug Fixing & Optimization:</b></spam><samp> Tracked down and resolved gameplay bugs and errors in the code, improving performance and overall game stability.</samp></li>
-													<li style="list-style-type: square"><spam><b>WebGL Configuration:</b></spam><samp> Creation of the game oriented to both cell phones and PCs</samp></li>
-												</ul>
-											</span>
-										</li>
-										<li>
-											<ul class="fh5co-social-icons animate-box">
-												<li><a href="https://zdextiny.itch.io/wikimedia-al-museo"  target="_blank"><i class="icon-link"></i></a></li>
-											</ul>
-										</li>
-									</ul>
+    <!-- RESUME -->
+    <section class="section" id="resume">
+      <div class="wrap">
+        <p class="section-kicker reveal">05 — resume</p>
+        <h2 class="h2 reveal">Experiencia &amp; educación</h2>
 
-									
-								</div>
+        <div class="timeline">
+          <h3 class="timeline__group reveal">Experiencia laboral</h3>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2024 — 2025</div>
+            <div class="timeline__what">
+              <h4>Game Developer <span>· Wikimedia Argentina</span></h4>
+              <p>Lead developer de la colección de juegos del Museo Gregorio Álvarez, Neuquén. Desarrollo, diseño y QA principal.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2019 — presente</div>
+            <div class="timeline__what">
+              <h4>Support &amp; Service Agent <span>· Activo Contact Center</span></h4>
+              <p>Atención al cliente en campañas de marketing con objetivos dinámicos.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2018 — 2019</div>
+            <div class="timeline__what">
+              <h4>Screenwriter <span>· Guionarte School</span></h4>
+              <p>Producción y guion para cortos y series de distribución internacional, incluyendo <em>Simuladores</em> de Damián Szifron.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2016 — 2018</div>
+            <div class="timeline__what">
+              <h4>Administrative Cadet <span>· Baufeld Constructions SRL</span></h4>
+              <p>Preparación y entrega de documentación administrativa.</p>
+            </div>
+          </div>
 
-								
+          <h3 class="timeline__group reveal">Educación</h3>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2021 — 2024</div>
+            <div class="timeline__what">
+              <h4>Técnico en Desarrollo de Videojuegos <span>· UADE</span></h4>
+              <p>Completado.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2020 — 2022</div>
+            <div class="timeline__what">
+              <h4>Inglés certificado C2 <span>· Education First</span></h4>
+              <p>Completado.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2019 — 2020</div>
+            <div class="timeline__what">
+              <h4>Guion cinematográfico <span>· FUC</span></h4>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__when">2018 — 2019</div>
+            <div class="timeline__what">
+              <h4>Screenwriter <span>· Guionarte School</span></h4>
+              <p>Completado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-							</div>
+  </main>
 
-						</div>
+  <!-- CONTACT / FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="wrap footer__inner">
+      <p class="eyebrow">// end_of_file</p>
+      <h2 class="h2">¿Armamos algo juntos?</h2>
+      <p class="footer__lead">Siempre abierto a proyectos nuevos, colaboraciones o simplemente hablar de diseño de juegos.</p>
+      <a href="mailto:agustincavalie14@gmail.com" class="btn btn--accent btn--large">agustincavalie14@gmail.com</a>
+      <ul class="social-row social-row--center">
+        <li><a href="https://x.com/Slender_man2203" target="_blank" rel="noopener">X / Twitter</a></li>
+        <li><a href="https://zdextiny.itch.io" target="_blank" rel="noopener">itch.io</a></li>
+        <li><a href="https://github.com/zdextiny" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/agustín-cavalie-a88922149/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <p class="footer__copy">© <span id="year"></span> Agustín Cavalié — Z-Dextiny</p>
+    </div>
+    <a class="gototop" href="#top" aria-label="Volver arriba">↑</a>
+  </footer>
 
-			    	</ul>
-				</div>
-				
-			</div>
+  <div class="game-player" id="game-player" hidden role="dialog" aria-modal="true" aria-label="Reproductor de juego">
+    <div class="game-player__bar" id="game-player-bar">
+      <span class="game-player__title" id="game-player-title"></span>
+      <div class="game-player__controls">
+        <button type="button" class="game-player__btn" id="game-player-fullscreen" title="Pantalla completa" aria-label="Pantalla completa">⛶</button>
+        <button type="button" class="game-player__btn" id="game-player-close" title="Cerrar" aria-label="Cerrar juego">✕</button>
+      </div>
+    </div>
+    <div class="game-player__loading" id="game-player-loading" hidden>
+      <div class="game-player__spinner"></div>
+      <span>Cargando…</span>
+    </div>
+    <iframe id="game-player-frame" class="game-player__frame" src="about:blank" allow="gamepad; fullscreen; autoplay" allowfullscreen></iframe>
+  </div>
 
-		</div>
-	</div>
-
-	<div id="fh5co-started" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Personal Projects</h2>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><b><h3>L´agrima The Eternal Sword</h3></b></div>
-						</li>
-						
-						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box col-md-8 col-md-offset-2 text-center">
-								<div id="mysticCatacomsSlides" class="carousel slide" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#mysticCatacomsSlides" data-slide-to="0" class="active"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="1"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="2"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="3"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="4"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="5"></li>
-								  </ol>
-							  
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" style="border-radius: 8px;">
-									<div class="item active">
-									  <img src="images/portada.jpg" alt="1" style="width:100%;">
-									</div>
-							  
-									<div class="item">
-									  <img src="images/screenshot1.jpg" alt="2">
-									</div>
-
-									<div class="item">
-									  <img src="images/screenshot2.jpg" alt="3">
-									</div>
-									
-									<div class="item">
-									  <img src="images/screenshot4.jpg" alt="4">
-									</div>
-							
-									<div class="item">
-									  <img src="images/screenshot5.jpg" alt="5">
-									</div>
-									
-									<div class="item">
-									  <img src="images/screenshot6.jpg" alt="6">
-									</div>
-								  </div>
-							  
-								  <!-- Left and right controls -->
-								  <a class="left carousel-control" href="#mysticCatacomsSlides" data-slide="prev" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control" href="#mysticCatacomsSlides" data-slide="next" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-							</div>
-
-							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-								<div class="timeline-heading animate-box">
-									<span class="timeline-title">Apr 2023 - Nov 2023 - Solo Project - Windows</span>
-								</div>
-								
-
-								<div class="timeline-body animate-box">
-									<p>A Isometric Diablo-Style Fantasy</p>
-									<p>This game prototype is a personal project that showcases my skills in AI development and combat mechanics. Implementation of bosses, a State Machine, a skill purchase and upgrade system, and cinematics in a 3D environment.</p>
-															
-								</div>
-								<div class="timeline-body animate-box">
-									<p><a href="https://zdextiny.itch.io/lagrima-the-eternal-sword" target="_blank" class="btn btn-default btn-lg">Play</a></p>
-								</div>
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><b><h3>Gun Gambit</h3></b></div>
-						</li>
-						
-						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box col-md-8 col-md-offset-2 text-center">
-								<div id="mysticCatacomsSlides" class="carousel slide" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#mysticCatacomsSlides" data-slide-to="0" class="active"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="1"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="2"></li>
-								  </ol>
-							  
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" style="border-radius: 8px;">
-									<div class="item active">
-									  <img src="images/gun1.png" alt="1" style="width:100%;">
-									</div>
-							  
-									<div class="item">
-									  <img src="images/gun2.png" alt="2">
-									</div>
-
-									<div class="item">
-									  <img src="images/gun3.png" alt="3">
-									</div>
-									
-								  </div>
-							  
-								  <!-- Left and right controls -->
-								  <a class="left carousel-control" href="#mysticCatacomsSlides" data-slide="prev" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control" href="#mysticCatacomsSlides" data-slide="next" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-							</div>
-
-							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-								<div class="timeline-heading animate-box">
-									<span class="timeline-title">Jul 2023 - Oct 2023 - Group Proyect - Windows</span>
-								</div>
-								
-
-								<div class="timeline-body animate-box">
-									<p>Top-Down Hotline Miami-Style</p>
-									<p>In this project I was in the area of ​​testing, polishing, optimization and WebGL version in addition to doing the level design.</p>
-									<p>                                                                                                                              </p>
-									<p><a href="https://zdextiny.itch.io/gun-ganbit" target="_blank" class="btn btn-default btn-lg">Play</a></p>								
-								</div>
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><b><h3>AstroCat Catcher</h3></b></div>
-						</li>
-						
-						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box col-md-8 col-md-offset-2 text-center">
-								<div id="mysticCatacomsSlides" class="carousel slide" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#mysticCatacomsSlides" data-slide-to="0" class="active"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="1"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="2"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="3"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="4"></li>
-								  </ol>
-							  
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" style="border-radius: 8px;">
-									<div class="item active">
-									  <img src="images/cat1.png" alt="1" style="width:100%;">
-									</div>
-							  
-									<div class="item">
-									  <img src="images/cat2.png" alt="2">
-									</div>
-
-									<div class="item">
-									  <img src="images/cat3.png" alt="3">
-									</div>
-									
-									<div class="item">
-									  <img src="images/cat4.png" alt="4">
-									</div>
-
-									<div class="item">
-									  <img src="images/cat5.png" alt="5">
-									</div>
-								  </div>
-							  
-								  <!-- Left and right controls -->
-								  <a class="left carousel-control" href="#mysticCatacomsSlides" data-slide="prev" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control" href="#mysticCatacomsSlides" data-slide="next" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-							</div>
-
-							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-								<div class="timeline-heading animate-box">
-									<span class="timeline-title">Jan 2022 - March 2022 - Solo Proyect - Windows</span>
-								</div>
-								
-
-								<div class="timeline-body animate-box">
-									<p>Arcade 2D Game Snake-Inpired</p>
-									<p>Solo project where I practiced using particles, shaders, and bursts in a controlled space. Except for the sound and music, all the art is my own creation. Fast and addictive gameplay. Difficult to master.</p>
-									<p><a href="https://zdextiny.itch.io/astrocat-catcher" target="_blank" class="btn btn-default btn-lg">Play</a></p>								
-								</div>
-								
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><b><h3>El Bazado</h3></b></div>
-						</li>
-						
-						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box col-md-8 col-md-offset-2 text-center">
-								<div id="mysticCatacomsSlides" class="carousel slide" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#mysticCatacomsSlides" data-slide-to="0" class="active"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="1"></li>
-									<li data-target="#mysticCatacomsSlides" data-slide-to="2"></li>
-									
-								  </ol>
-							  
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" style="border-radius: 8px;">
-									<div class="item active">
-									  <img src="images/Baza1.png" alt="1" style="width:100%;">
-									</div>
-							  
-									<div class="item">
-									  <img src="images/Baza2.png" alt="2">
-									</div>
-
-									<div class="item">
-									  <img src="images/Baza3.png" alt="3">
-									</div>
-																		
-								  </div>
-							  
-								  <!-- Left and right controls -->
-								  <a class="left carousel-control" href="#mysticCatacomsSlides" data-slide="prev" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control" href="#mysticCatacomsSlides" data-slide="next" style="border-radius: 8px;">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-							</div>
-
-							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-								<div class="timeline-heading animate-box">
-									<span class="timeline-title">Augo 2026 - Aug 2026 - Solo Proyect - WebGL</span>
-								</div>
-								
-
-								<div class="timeline-body animate-box">
-									<p>Card Games 2D</p>
-									<p>Practise for an online game and card IA-bot. Playable solo or online, with support for both PC and mobile. A trick-taking card game where players must predict how many rounds they will win each hand. </p>
-									<p><a href="https://el-bazado.netlify.app" target="_blank" class="btn btn-default btn-lg">Play</a></p>								
-								</div>
-								
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div id="fh5co-skills" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Skills</h2>
-				</div>
-			</div>
-			<div class="row row-pb-md">
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<h3>Engines</h3>
-					<ul>
-						<li><p>Unity</p></li>
-						<li><p>Unreal</p></li>
-					</ul>
-					<h3>Other Tools</h3>
-					<ul>
-						<li><p>Aseprite</p></li>
-						<li><p>Adobe Illustrator</p></li>
-						<li><p>Adobe Premiere</p></li>
-						<li><p>Adobe Photoshop</p></li>
-						<li><p>ShotCut</p></li>
-						<li><p>PicoCad</p></li>
-						<li><p>Crocotile</p></li>
-					</ul>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<h3>Code</h3>
-					<ul>
-						<li><p>C#</p></li>
-						<li><p>C++</p></li>
-						<li><p>HTML5</p></li>
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<h3>Programming Concepts</h3>
-					<ul>
-						<li><p>Solid knowledge and experience in programming patterns applied to videogames, such as <strong>Factory, Builder, Command, Mediator, Strategy, Observer, Object Pooling, etc.</strong></p></li>
-						<li><p>Knowledge and experience using AI algorithms such as <strong>A* Pathfinding, Dijkstra, FSM, Steerings, Obstacle Avoidance, Roulette, Flocking, Decision Trees and Behaviour Trees.</strong></p></li>
-						<li><p>Knowledge using the <strong>MVC</strong> architectural pattern.</p></li>
-						<li><p>Knowledge in multiplayer architectures like <strong>Full Authoritative and Non authoritative.</strong></p></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-
-	<hr style="border: 2px solid rgb(83, 83, 83); width: 50%; border-radius: 3px;">
-
-	<div id="fh5co-resume" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>My Resume</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Game Developer</h3>
-									<span class="company">Wikimedia Argentina - 2024 - 2025</span>
-								</div>
-								<div class="timeline-body">
-									<p>Lead Developer on the Games Collection of the Gregorio Álvarez Museum in Neuquén. Developer, Design, and Main QA.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Support and Service Agent</h3>
-									<span class="company">Activo Contact Center - 2019 - Present</span>
-								</div>
-								<div class="timeline-body">
-									<p>Customer Service Representative involved in various marketing campaigns with dynamic objectives to meet.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Screenwriter</h3>
-									<span class="company">Guionarte School - 2018 - 2019</span>
-								</div>
-								<div class="timeline-body">
-									<p>Production and scriptwriting for numerous short films and series for international distribution. Among the projects completed are: Damian Szifron's Simulators, and his own productions "Friends" and "Memories."</p>
-								</div>
-							</div>
-						</li>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Administrative Cadet</h3>
-									<span class="company">Baufeld Contructions SRL - 2016 - 2018</span>
-								</div>
-								<div class="timeline-body">
-									<p>Preparation and delivery of administrative documentation</p>
-								</div>
-							</div>
-						</li>
-
-
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Game Development Technician</h3>
-									<span class="company">UADE - 2021 - 2024 Completed</span>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Certified English C2</h3>
-									<span class="company">Education First - 2020 - 2022 Completed </span>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Film Screenwriter</h3>
-									<span class="company">FUC - 2019 - 2020</span>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Screenwriter</h3>
-									<span class="company">Guionarte School - 2018 - 2019 Completed</span>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
-
-	</body>
+  <script src="js/projects.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/game-player.js"></script>
+</body>
 </html>
-
