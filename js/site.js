@@ -156,6 +156,32 @@
     });
   }
 
+  // ---------- Imagen central del caso Wikimedia: pantalla de titulo fija
+  // los primeros 2s, despues carrusel infinito entre 2 gifs de gameplay ----
+  (function () {
+    var central = document.getElementById("feature-wikimedia-central");
+    if (!central) return;
+    var WIKIMEDIA_CENTRAL_LOOP = ["images/museo-anim-13.gif", "images/museo-anim-15.gif"];
+
+    function cycle(idx) {
+      var nextSrc = WIKIMEDIA_CENTRAL_LOOP[idx % WIKIMEDIA_CENTRAL_LOOP.length];
+      var preload = new Image();
+      preload.onload = function () {
+        central.classList.add("is-fading");
+        setTimeout(function () {
+          central.src = nextSrc;
+          central.classList.remove("is-fading");
+          getGifLoopDuration(nextSrc).then(function (ms) {
+            setTimeout(function () { cycle(idx + 1); }, ms || 4000);
+          });
+        }, 260);
+      };
+      preload.src = nextSrc;
+    }
+
+    setTimeout(function () { cycle(0); }, 2000);
+  })();
+
   // ---------- Reproductor inline del caso Wikimedia (feature__player) ----------
   // Build WebGL exportado a games/wikimedia-museo/ (misma convencion que los
   // juegos de la grilla de proyectos, ver js/game-player.js) -- pero acá el
