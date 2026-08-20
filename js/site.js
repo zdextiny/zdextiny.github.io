@@ -258,34 +258,47 @@
     });
   }
 
-  // ---------- Ampliar tarjeta (click en la portada) ----------
+  // ---------- Ampliar tarjeta (click en la portada, o al abrir un juego webgl) ----------
   // La portada recorta la imagen (object-fit: cover) para que todas las
   // tarjetas midan lo mismo -- clickearla la agranda mostrando la imagen
-  // COMPLETA (object-fit: contain) y encoge el resto de las tarjetas. Un
-  // solo listener delegado en el grid, asi funciona para todas las
-  // tarjetas (incluso las que se agreguen a projects.js despues).
+  // COMPLETA (object-fit: contain) y encoge el resto de las tarjetas.
+  // expandCard/collapseExpanded son function declarations (no var) para que
+  // queden disponibles en TODO el scope del archivo sin importar el orden
+  // -- buildProjectCard (mas abajo) tambien las llama, al abrir un juego
+  // webgl inline, para que el reproductor tenga el ancho de la grilla
+  // entera en vez de quedar atado a una columna angosta de tarjeta.
+  function collapseExpanded() {
+    if (!grid) return;
+    grid.classList.remove("is-focused");
+    grid.querySelectorAll(".project-card").forEach(function (c) {
+      c.classList.remove("project-card--focused", "project-card--cover-open", "project-card--playing", "project-card--minimized");
+    });
+  }
+  // extraClass: "project-card--cover-open" para el click en la portada
+  // (agranda la imagen), nada para el reproductor webgl (la portada se
+  // queda chica, el ancho extra lo usa el reproductor en vez de la imagen).
+  function expandCard(card, extraClass) {
+    if (!grid) return;
+    collapseExpanded();
+    grid.classList.add("is-focused");
+    card.classList.add("project-card--focused");
+    if (extraClass) card.classList.add(extraClass);
+    grid.querySelectorAll(".project-card").forEach(function (c) {
+      if (c !== card) c.classList.add("project-card--minimized");
+    });
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
   if (grid) {
-    var collapseExpanded = function () {
-      grid.classList.remove("is-focused");
-      grid.querySelectorAll(".project-card").forEach(function (c) {
-        c.classList.remove("project-card--focused", "project-card--minimized");
-      });
-    };
     grid.addEventListener("click", function (e) {
       if (e.target.closest(".project-card__arrow, .project-card__dots")) return;
       var closeBtn = e.target.closest(".js-expand-close");
       var cover = closeBtn ? closeBtn.closest(".project-card__cover") : e.target.closest(".project-card__cover");
       if (!cover) return;
       var card = cover.closest(".project-card");
-      var wasFocused = card.classList.contains("project-card--focused");
+      var wasCoverOpen = card.classList.contains("project-card--cover-open");
       collapseExpanded();
-      if (closeBtn || wasFocused) return;
-      grid.classList.add("is-focused");
-      card.classList.add("project-card--focused");
-      grid.querySelectorAll(".project-card").forEach(function (c) {
-        if (c !== card) c.classList.add("project-card--minimized");
-      });
-      card.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (closeBtn || wasCoverOpen) return;
+      expandCard(card, "project-card--cover-open");
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && grid.classList.contains("is-focused")) collapseExpanded();
@@ -523,8 +536,59 @@
 
     if (project.play && project.play.type === "webgl") {
       var webglBtn = card.querySelector(".js-play-webgl");
+      var webglEmbedBox = card.querySelector(".project-card__embed");
       webglBtn.addEventListener("click", function () {
-        if (window.GamePlayer) window.GamePlayer.open(project);
+        var isOpen = !webglEmbedBox.hidden;
+        if (isOpen) {
+          var openFsEl = document.fullscreenElement || document.webkitFullscreenElement;
+          if (openFsEl) {
+            var exit = document.exitFullscreen || document.webkitExitFullscreen;
+            if (exit) exit.call(document);
+          }
+          webglEmbedBox.hidden = true;
+          webglEmbedBox.classList.remove("project-card__embed--webgl");
+          webglEmbedBox.innerHTML = "";
+          webglBtn.hidden = false;
+          collapseExpanded();
+          return;
+        }
+
+        expandCard(card, "project-card--playing");
+        webglEmbedBox.hidden = false;
+        webglEmbedBox.classList.add("project-card__embed--webgl");
+        webglEmbedBox.innerHTML =
+          '<div class="project-card__embed-bar">' +
+          '<button type="button" class="btn btn--ghost btn--small js-embed-close">✕ Cerrar</button>' +
+          '<button type="button" class="btn btn--ghost btn--small js-embed-fullscreen">⛶ Pantalla completa</button>' +
+          "</div>" +
+          '<div class="project-card__embed-frame-wrap">' +
+          '<div class="game-player__loading"><div class="game-player__spinner"></div><span>Cargando…</span></div>' +
+          '<iframe class="project-card__embed-frame" src="' + project.play.path + '" title="' + project.title + ' — jugable" allow="gamepad; fullscreen; autoplay" allowfullscreen></iframe>' +
+          "</div>";
+
+        var frameWrap = webglEmbedBox.querySelector(".project-card__embed-frame-wrap");
+        var loadingEl = webglEmbedBox.querySelector(".game-player__loading");
+        var iframeEl = webglEmbedBox.querySelector(".project-card__embed-frame");
+        iframeEl.addEventListener("load", function () {
+          loadingEl.hidden = true;
+        });
+        webglEmbedBox.querySelector(".js-embed-close").addEventListener("click", function () {
+          webglBtn.click();
+        });
+        webglEmbedBox.querySelector(".js-embed-fullscreen").addEventListener("click", function () {
+          var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+          if (fsEl) {
+            var exit = document.exitFullscreen || document.webkitExitFullscreen;
+            if (exit) exit.call(document);
+            return;
+          }
+          var req = frameWrap.requestFullscreen || frameWrap.webkitRequestFullscreen;
+          if (req) {
+            try { req.call(frameWrap); } catch (e) {}
+          }
+        });
+
+        webglBtn.hidden = true;
       });
     }
 

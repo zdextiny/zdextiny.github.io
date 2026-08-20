@@ -41,11 +41,11 @@ const PROJECTS = [
   },
  {
     id: "bazado-ds",
-    title: "Bazado-DS",
+    title: "BazaDS",
     year: "2026",
-    role: "Solo · programación, porteo completo",
+    role: "Solo project",
     engine: "Nintendo DS · libnds (C)",
-    tags: ["Homebrew", "Nintendo DS", "C"],
+    tags: ["Homebrew", "Nintendo DS", "C", "Port"],
     cover: "images/bazado-ds-anim-1.gif",
     gallery: ["images/bazado-ds-anim-1.gif", "images/bazado-ds-anim-2.gif", "images/bazado-ds-anim-3.gif"],
     description:
@@ -60,9 +60,9 @@ const PROJECTS = [
     id: "el-bazado",
     title: "El Bazado",
     year: "2026",
-    role: "Solo · diseño, programación, arte",
+    role: "Solo project",
     engine: "HTML5 / WebGL · Electron",
-    tags: ["Cartas", "IA", "Web"],
+    tags: ["Cartas", "Online", "Web", "Crossplay"],
     cover: "images/el-bazado-anim-1.gif",
     gallery: ["images/el-bazado-anim-1.gif", "images/el-bazado-anim-2.gif", "images/el-bazado-anim-3.gif"],
     description:
@@ -74,17 +74,16 @@ const PROJECTS = [
     title: "AstroCat Catcher",
     year: "2022",
     role: "Solo project",
-    engine: "Unity · Windows",
+    engine: "Unity · Windows / WebGL",
     tags: ["Arcade", "2D", "Pixel art"],
     cover: "images/astrocat-anim-1.gif",
     gallery: ["images/astrocat-anim-1.gif", "images/astrocat-anim-2.gif", "images/astrocat-anim-3.gif"],
     description:
-      "Arcade 2D inspirado en Snake. Practica de particulas, shaders y ritmo en un espacio controlado -- todo el arte (salvo audio) es propio. Rapido, adictivo, dificil de dominar.",
-      play: { type: "external", url: "https://zdextiny.itch.io/astrocat-catcher", label: "Jugar en itch.io ↗" },
-      downloads: [
-        { label: "Codigo fuente", url: "https://github.com/zdextiny/AstroCat-Catcher" },
+      "Arcade 2D inspirado en Snake. Practica de particulas, shaders y ritmo en un espacio controlado - todo el arte es propio.",
+    play: { type: "webgl", path: "games/astrocat-catcher/index.html", label: "Jugar aca" },
+    downloads: [
+      { label: "Codigo fuente", url: "https://github.com/zdextiny/AstroCat-Catcher" },
     ],
-    
   },
   {
     id: "gun-gambit",
@@ -94,7 +93,7 @@ const PROJECTS = [
     engine: "Unity · Windows / WebGL",
     tags: ["Top-down", "Accion"],
     cover: "images/gun1.png",
-    gallery: ["images/gun1.png", "images/gun2.png", "images/gun3.png"],
+    gallery: ["images/gun1.gif", "images/gun2.png", "images/gun3.png"],
     description:
       "Top-down estilo Hotline Miami. En este proyecto estuve en el area deesting, pulido, optimizacion, la version WebGL y el diseño de niveles.",
     play: { type: "external", url: "https://zdextiny.itch.io/gun-ganbit", label: "Jugar en itch.io ↗" },
