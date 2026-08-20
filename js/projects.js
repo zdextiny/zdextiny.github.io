@@ -71,6 +71,8 @@ const PROJECTS = [
     description:
       "Juego de bazas tanto Online como contra la maquina en distintas dificultades. Proyecto para probar crear un entorno online simple ademas de tener croosplay entre celular y pc.",
     play: { type: "external", url: "https://el-bazado.netlify.app", label: "Jugar Online" },
+
+    downloads:  [ { label: "Codigo fuente", url: "https://github.com/zdextiny/bazas-cartas" },],
   },
   {
     id: "astrocat",
@@ -83,7 +85,7 @@ const PROJECTS = [
     gallery: ["images/astrocat-anim-1.gif", "images/astrocat-anim-2.gif", "images/astrocat-anim-3.gif"],
     description:
       "Arcade 2D inspirado en Snake. Practica de particulas, shaders y ritmo en un espacio controlado - todo el arte es propio.",
-    play: { type: "webgl", path: "games/astrocat-catcher/index.html", label: "Jugar aca" },
+    play: { type: "webgl", path: "games/astrocat-catcher/index.html", label: "Jugar (Solo PC)" },
     downloads: [
       { label: "Codigo fuente", url: "https://github.com/zdextiny/AstroCat-Catcher" },
     ],
@@ -96,12 +98,14 @@ const PROJECTS = [
     engine: "Unity · Windows / WebGL",
     tags: ["Top-down", "Accion"],
     cover: "images/gun1.png",
-    gallery: ["images/gun1.gif", "images/gun2.png", "images/gun3.png"],
+    gallery: ["images/gun1.gif"],
     description:
       "Top-down estilo Hotline Miami. En este proyecto estuve en el area deesting, pulido, optimizacion, la version WebGL y el diseño de niveles.",
-    play: { type: "webgl", path: "games/gun-gambit/index.html", label: "Jugar aca" },
+    play: { type: "webgl", path: "games/gun-gambit/index.html", label: "Jugar (Solo PC))" },
     downloads: [
-      { label: "Ver en itch.io ↗", url: "https://zdextiny.itch.io/gun-ganbit" },
+      { label: "ir a itch.io ↗", url: "https://zdextiny.itch.io/gun-ganbit" },
+       { label: "Ver codigo fuente", url: "https://github.com/CampoLucas/GunBandit" },
+      
     ],
   },
  
