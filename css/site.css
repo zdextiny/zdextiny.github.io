@@ -213,6 +213,38 @@ a { color: inherit; text-decoration: none; }
 
 .hero__inner { position: relative; z-index: 1; padding-top: 64px; }
 
+/* ---------- hero: fondo del combate de Samurai Champloo, renderizado
+   como texto coloreado en vivo (js/hero-ascii.js) -- el <video> nunca se
+   ve, solo alimenta frames al canvas de arriba. ---------- */
+.hero__ascii-source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.hero__ascii-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.9;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__ascii-canvas { display: none; }
+}
+
+/* banner solido SOLO detras del parrafo del subtitulo -- el titulo, los
+   botones y las redes quedan flotando directo sobre el video, sin caja */
+.hero__subtitle--panel {
+  display: inline-block;
+  background: rgba(10, 8, 13, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
 /* ---------- hero: galeria de assets propios ---------- */
 .hero__gallery {
   /* mobile/vertical: en el flujo normal, debajo de las redes, las 5 en
@@ -334,6 +366,19 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(-2px);
 }
 .social-row--center { justify-content: center; margin: 26px 0; }
+
+/* mismo banner negro que .hero__subtitle--panel, para la fila de redes del
+   hero -- se achica al ancho de los iconos (width: fit-content), no ocupa
+   todo el ancho de la columna de texto */
+.social-row--panel {
+  width: fit-content;
+  background: rgba(10, 8, 13, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
 
 /* ---------- sections ---------- */
 .section { padding: 108px 0; }

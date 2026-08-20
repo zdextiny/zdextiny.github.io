@@ -50,6 +50,10 @@
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__ascii" aria-hidden="true">
+        <video id="hero-video" class="hero__ascii-source" src="videos/hero-fight.mp4" muted loop playsinline preload="auto"></video>
+        <canvas id="hero-ascii-canvas" class="hero__ascii-canvas"></canvas>
+      </div>
       <div class="hero__gallery" id="hero-gallery" aria-hidden="true">
         <img class="hero__gallery-item" src="images/hero-bender.gif" alt="" loading="lazy">
         <img class="hero__gallery-item" src="images/hero-cuarto.png" alt="" loading="lazy">
@@ -64,7 +68,7 @@
           Agustín<br>
           <span class="text-accent">Cavalié</span>
         </h1>
-        <p class="hero__subtitle reveal">
+        <p class="hero__subtitle hero__subtitle--panel reveal">
           Diseño y programo mecánicas de juego que se sienten bien de controlar
           — desde arcades 2D pixel art hasta juegos grandes de acción 3D.
         </p>
@@ -72,7 +76,7 @@
           <a href="#projects" class="btn btn--accent">Ver proyectos</a>
           <a href="#contact" class="btn btn--ghost">Contactar</a>
         </div>
-        <ul class="social-row reveal" aria-label="Redes">
+        <ul class="social-row social-row--panel reveal" aria-label="Redes">
           <li><a href="https://x.com/Slender_man2203" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4L20 20M20 4L4 20"/></svg>
           </a></li>
@@ -375,5 +379,6 @@
   <script src="js/projects.js"></script>
   <script src="js/site.js"></script>
   <script src="js/game-player.js"></script>
+  <script src="js/hero-ascii.js"></script>
 </body>
 </html>
