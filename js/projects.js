@@ -30,7 +30,7 @@ const PROJECTS = [
     id: "lagrima",
     title: "L'agrima, The Eternal Sword",
     year: "2023",
-    role: "Solo project",
+    role: "Group project",
     engine: "Unity · Windows",
     tags: ["3D", "Isometrico", "Combate"],
     cover: "images/portada.jpg",
@@ -38,6 +38,9 @@ const PROJECTS = [
     description:
       "Fantasia isometrica estilo Diablo. Prototipo enfocado en IA de combate: jefes con maquina de estados, sistema de compra/mejora de habilidades y cinematicas en un entorno 3D.",
     play: { type: "external", url: "https://zdextiny.itch.io/lagrima-the-eternal-sword", label: "Jugar en itch.io ↗" },
+     downloads: [
+      { label: "Codigo fuente", url: "https://github.com/JZomber/NotGungeon/tree/f95457f4421dec2216058ee49c1916afd0f9c189" },
+    ],
   },
  {
     id: "bazado-ds",
@@ -96,7 +99,10 @@ const PROJECTS = [
     gallery: ["images/gun1.gif", "images/gun2.png", "images/gun3.png"],
     description:
       "Top-down estilo Hotline Miami. En este proyecto estuve en el area deesting, pulido, optimizacion, la version WebGL y el diseño de niveles.",
-    play: { type: "external", url: "https://zdextiny.itch.io/gun-ganbit", label: "Jugar en itch.io ↗" },
+    play: { type: "webgl", path: "games/gun-gambit/index.html", label: "Jugar aca" },
+    downloads: [
+      { label: "Ver en itch.io ↗", url: "https://zdextiny.itch.io/gun-ganbit" },
+    ],
   },
  
 ];

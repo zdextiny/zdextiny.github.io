@@ -58,9 +58,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Build.data.br",
-        frameworkUrl: buildUrl + "/Build.framework.js.br",
-        codeUrl: buildUrl + "/Build.wasm.br",
+        // Build descomprimida (no .br): GitHub Pages no manda el header
+        // Content-Encoding que el navegador necesita para descomprimir
+        // Brotli solo -- servir los archivos ya descomprimidos es mas
+        // grande pero 100% confiable.
+        dataUrl: buildUrl + "/Build.data",
+        frameworkUrl: buildUrl + "/Build.framework.js",
+        codeUrl: buildUrl + "/Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "GunGambit",
@@ -93,10 +97,12 @@
 
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "960px";
-        canvas.style.height = "540px";
+        // Desktop, pero embebido en el reproductor del portfolio (iframe
+        // responsive, no una ventana nativa) -- ocupa todo el contenedor
+        // en vez de quedar fijo en 960x540.
+        container.className = "unity-desktop";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
       }
 
       loadingBar.style.display = "block";

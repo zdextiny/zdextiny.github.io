@@ -263,11 +263,11 @@ a { color: inherit; text-decoration: none; }
   50% { transform: translateY(-7px); }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1460px) {
   .hero__gallery {
     position: absolute;
     top: 50%;
-    right: 3%;
+    right: 4%;
     transform: translateY(-50%);
     z-index: 0;
     display: grid;

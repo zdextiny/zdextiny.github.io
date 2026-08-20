@@ -11,6 +11,34 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ---------- Galeria del hero: reubicar segun ancho de pantalla ----------
+  // En escritorio (>=1460px) tiene que ser position:absolute respecto a
+  // TODA la seccion .hero (flota al costado del texto). En mobile tiene
+  // que quedar en el flujo normal, debajo de los iconos de redes -- pero
+  // ahi adentro (.hero__inner) el "right:3%" de la version de escritorio
+  // se calcularia relativo al ancho angosto de la columna de texto, no al
+  // de toda la pantalla, y terminaba superpuesta al texto. Para que cada
+  // modo tenga el contenedor de referencia correcto, la movemos de lugar
+  // en el DOM segun corresponda (mismo elemento, no se duplica nada, asi
+  // la rotacion de imagenes de mas abajo sigue funcionando igual).
+  (function () {
+    var gallery = document.getElementById("hero-gallery");
+    var mobileSlot = document.getElementById("hero-gallery-mobile-slot");
+    var hero = document.getElementById("hero");
+    if (!gallery || !mobileSlot || !hero) return;
+    var mq = window.matchMedia("(min-width: 1460px)");
+    function place() {
+      if (mq.matches) {
+        if (gallery.parentElement !== hero) hero.appendChild(gallery);
+      } else {
+        if (gallery.parentElement !== mobileSlot) mobileSlot.appendChild(gallery);
+      }
+    }
+    place();
+    if (mq.addEventListener) mq.addEventListener("change", place);
+    else if (mq.addListener) mq.addListener(place);
+  })();
+
   // ---------- Galeria del hero: rotacion con fade, desincronizada por celda ----------
   // Pool de assets propios (carpeta D:\PixelArt123\Best) -- cada cuadro de
   // la grilla cicla su propia baraja mezclada de este mismo pool, cada uno
